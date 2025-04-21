@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Dark | Tu Nombre</title>
+    <title>Cristobal Escandon Portafolio Web</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -14,6 +15,15 @@
         .fade-in {
             animation: fadeIn 0.6s ease-out;
         }
+
+        #modalProyecto {
+            animation: fadeIn 0.3s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
     </style>
     <script>
         tailwind.config = {
@@ -39,8 +49,8 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <a href="#" class="flex items-center space-x-2">
-                    <img src="logo.svg" alt="Logo" class="w-10 h-10">
-                    <span class="text-xl font-bold text-[#58a6ff]">Tu Nombre</span>
+                    <img src="logo.png" alt="Logo" class="w-10 h-10">
+                    <span class="text-xl font-bold text-[#58a6ff]">Cristobal Escandon</span>
                 </a>
                 
                 <div class="hidden md:flex items-center space-x-8">
@@ -72,7 +82,7 @@
     <!-- Sección Bienvenida -->
     <section class="min-h-screen bg-gradient-to-br from-[#0d1117] to-[#161b22] flex items-center pt-20">
         <div class="container mx-auto px-6 text-center fade-in">
-            <h1 class="text-4xl md:text-6xl font-bold text-[#58a6ff] mb-6">Diseñando en la oscuridad</h1>
+            <h1 class="text-4xl md:text-6xl font-bold text-[#58a6ff] mb-6">Diseño de interfaces y experiencias de usuario</h1>
             <p class="text-xl md:text-2xl text-[#8b949e] mb-8">UX/UI Designer especializado en interfaces oscuras</p>
             <a href="#proyectos" class="inline-block bg-[#238636] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#2ea043] transition">
                 Ver proyectos
@@ -80,30 +90,190 @@
         </div>
     </section>
 
-    <!-- Sección Proyectos -->
-    <section id="proyectos" class="py-20 bg-[#161b22]">
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="py-20 bg-[#0d1117] border-t border-[#30363d] fade-in">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-[#58a6ff]">Casos de Estudio</h2>
+        <h2 class="text-3xl font-bold text-center mb-12 text-[#58a6ff]">Sobre mí</h2>
+    
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-stretch gap-10">
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Proyecto 1 -->
-                <div class="bg-[#0d1117] rounded-xl border border-[#30363d] overflow-hidden transform transition hover:-translate-y-2">
-                    <img src="proyecto1.jpg" alt="Proyecto 1" class="w-full h-48 object-cover border-b border-[#30363d]">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3 text-[#58a6ff]">App de Salud Mental</h3>
-                        <button onclick="openModal('modal1')" class="bg-[#238636] text-white px-4 py-2 rounded-md hover:bg-[#2ea043] transition">
-                            Detalles
-                        </button>
-                        <a href="#" class="ml-2 bg-[#21262d] text-[#c9d1d9] px-4 py-2 rounded-md hover:bg-[#30363d] transition border border-[#30363d]">
-                            Prototipo
-                        </a>
-                    </div>
+            <!-- Imagen y datos personales -->
+            <div class="flex flex-col items-center md:items-start justify-start gap-4 p-4 bg-[#161b22] rounded-xl w-full md:w-1/3">
+            <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-blue-400">
+                <img src="./Resource/avatar.webp" class="w-full h-full object-cover" />
+            </div>
+            <div class="text-[#c9d1d9] space-y-1 text-sm md:text-base text-center md:text-left">
+                <p><strong>Nombre:</strong> Cristobal Escandon</p>
+                <p><strong>Edad:</strong> 25 años</p>
+                <p><strong>Ubicación:</strong> México</p>
+                <p><strong>Ocupación:</strong> UX/UI Designer</p>
+            </div>
+            </div>
+    
+            <!-- Descripción -->
+            <div class="text-[#8b949e] text-lg leading-relaxed space-y-6 w-full md:w-2/3 bg-[#161b22] p-4 rounded-xl">
+            <p>¡Hola! Soy un diseñador UX/UI apasionado por crear experiencias digitales memorables. Me especializo en interfaces oscuras que combinan elegancia, funcionalidad y un toque de rebeldía.</p>
+            <p>Con una mentalidad centrada en el usuario y un amor por los detalles, busco soluciones visuales que no solo se vean bien, sino que también se sientan bien. Cada proyecto es una oportunidad para explorar, experimentar y mejorar.</p>
+            <p>Cuando no estoy diseñando, probablemente estoy explorando nuevas tendencias en diseño, afinando mis habilidades en prototipado o bebiendo café como si fuera una extensión de mi sangre ☕.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+  
+
+    <!-- Sección Vista Previa de CV -->
+    <section id="curriculum" class="py-20 bg-[#0d1117] border-t border-[#30363d]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#58a6ff]">Mi CV</h2>
+
+            <div class="max-w-4xl mx-auto bg-[#161b22] rounded-xl border border-[#30363d] overflow-hidden shadow-lg">
+                <!-- Vista previa PDF incrustada -->
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe 
+                        src="./Resource/Cristobal Escandon.pdf" 
+                        class="w-full h-[500px] md:h-[700px] border-0"
+                        allowfullscreen>
+                    </iframe>
                 </div>
 
-                <!-- Repetir para Proyecto 2 y 3 -->
+                <!-- Botón de descarga -->
+                <div class="p-6 text-center">
+                    <a href="./Resource/Cristobal Escandon.pdf" target="_blank" class="inline-block bg-[#238636] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#2ea043] transition">
+                        Descargar CV
+                    </a>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Sección Certificaciones -->
+    <section id="certificaciones" class="py-20 bg-[#0d1117] border-t border-[#30363d]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#58a6ff]">Certificaciones</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certificación 1 -->
+                <div class="bg-[#161b22] rounded-xl border border-[#30363d] overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1">
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/9HXMFM625OVG" target="_blank" rel="noopener noreferrer">
+                        <img src="./Resource/CERTIFICATE_LANDING_PAGE~1.webp" alt="Certificado 1" class="w-full h-48 object-cover border-b border-[#30363d]">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-[#58a6ff]">Fundamentos de UX Design - Google</h3>
+                            <p class="text-[#8b949e] mt-2 text-sm">Introducción a diseño UX, investigación y accesibilidad.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Certificación 2 -->
+                <div class="bg-[#161b22] rounded-xl border border-[#30363d] overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1">
+                    <a href="https://coursera.org/verify/tu-certificado-2" target="_blank" rel="noopener noreferrer">
+                        <img src="./Resource/CERTIFICATE_LANDING_PAGE~1.webp" alt="Certificado 2" class="w-full h-48 object-cover border-b border-[#30363d]">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-[#58a6ff]">Proceso de Diseño UX - Google</h3>
+                            <p class="text-[#8b949e] mt-2 text-sm">Wireframes, prototipos y pruebas con usuarios.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Certificación 3 -->
+                <div class="bg-[#161b22] rounded-xl border border-[#30363d] overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1">
+                    <a href="https://coursera.org/share/29b57306f9eede5a53cdf25f389c83ce" target="_blank" rel="noopener noreferrer">
+                        <img src="./Resource/CERTIFICATE_LANDING_PAGE~1.webp" alt="Certificado 3" class="w-full h-48 object-cover border-b border-[#30363d]">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-[#58a6ff]">Creación de Portafolios UX - Google</h3>
+                            <p class="text-[#8b949e] mt-2 text-sm">Cómo armar y presentar un portafolio UX profesional.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos centrada con slides angostas -->
+    <section id="proyectos" class="py-20 bg-[#161b22]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#58a6ff]">Casos de Estudio</h2>
+
+            <div class="relative">
+                <!-- Carrusel -->
+                <div class="flex justify-center overflow-hidden">
+                    <div id="carousel" class="flex transition-transform duration-500 ease-in-out gap-6"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <!-- Slide 1 -->
+                        <div class="w-80 shrink-0 bg-[#0d1117] rounded-xl border border-[#30363d] overflow-hidden hover:-translate-y-1 transition transform">
+                            <img src="proyecto1.jpg" alt="Proyecto 1" class="w-full h-48 object-cover border-b border-[#30363d]">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3 text-[#58a6ff]">App de Salud Mental</h3>
+                                <button onclick="abrirModal('App de Salud Mental', {
+                                    rol: 'Diseñador UX/UI principal',
+                                    objetivo: 'Desarrollar una solución digital para el manejo emocional diario',
+                                    publico: 'Jóvenes adultos entre 18 y 30 años con estrés o ansiedad',
+                                    desafios: 'Limitaciones técnicas en accesibilidad y tiempo limitado para pruebas',
+                                    investigacion: 'Entrevistas cualitativas con 50 usuarios y encuestas con 200 participantes',
+                                    conceptos: 'Interfaz minimalista enfocada en claridad y confort emocional',
+                                    bocetos: 'bocetos.jpg',
+                                    resultados: 'Incremento del 40% en usabilidad y reducción del 25% en tiempos de tarea',
+                                    mockup: 'mockup.jpg',
+                                    conclusion: 'Aprendí a priorizar accesibilidad y simplicidad. Siguientes pasos: testing A/B y personalización visual.'
+                                })"
+                                class="bg-[#238636] text-white px-4 py-2 rounded-md hover:bg-[#2ea043] transition">
+                                    Detalles
+                                </button>                                
+                                </button>
+                                <button onclick="abrirModalPrototipo('https://www.figma.com/proto/mi-prototipo')" 
+                                        class="ml-2 bg-[#21262d] text-[#c9d1d9] px-4 py-2 rounded-md hover:bg-[#30363d] transition border border-[#30363d]">
+                                    Prototipo
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="w-80 shrink-0 bg-[#0d1117] rounded-xl border border-[#30363d] overflow-hidden hover:-translate-y-1 transition transform">
+                            <img src="proyecto2.jpg" alt="Proyecto 2" class="w-full h-48 object-cover border-b border-[#30363d]">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3 text-[#58a6ff]">Dashboard Financiero</h3>
+                                <button onclick="abrirModal(
+                                    'App de Salud Mental',
+                                    'Una aplicación centrada en el bienestar mental con funciones de seguimiento emocional, ejercicios de respiración y meditación guiada. Se diseñó con base en estudios cualitativos y tests de accesibilidad, logrando una mejora del 40% en métricas de usabilidad.')"
+                                    class="bg-[#238636] text-white px-4 py-2 rounded-md hover:bg-[#2ea043] transition">
+                                    Detalles
+                                </button>
+                                <button onclick="abrirModalPrototipo('https://www.figma.com/proto/mi-prototipo')" 
+                                        class="ml-2 bg-[#21262d] text-[#c9d1d9] px-4 py-2 rounded-md hover:bg-[#30363d] transition border border-[#30363d]">
+                                    Prototipo
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="w-80 shrink-0 bg-[#0d1117] rounded-xl border border-[#30363d] overflow-hidden hover:-translate-y-1 transition transform">
+                            <img src="proyecto3.jpg" alt="Proyecto 3" class="w-full h-48 object-cover border-b border-[#30363d]">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-3 text-[#58a6ff]">Sitio E-commerce</h3>
+                                <button onclick="abrirModal(
+                                    'App de Salud Mental',
+                                    'Una aplicación centrada en el bienestar mental con funciones de seguimiento emocional, ejercicios de respiración y meditación guiada. Se diseñó con base en estudios cualitativos y tests de accesibilidad, logrando una mejora del 40% en métricas de usabilidad.')"
+                                    class="bg-[#238636] text-white px-4 py-2 rounded-md hover:bg-[#2ea043] transition">
+                                    Detalles
+                                </button>
+                                <button onclick="abrirModalPrototipo('https://www.figma.com/proto/mi-prototipo')" 
+                                        class="ml-2 bg-[#21262d] text-[#c9d1d9] px-4 py-2 rounded-md hover:bg-[#30363d] transition border border-[#30363d]">
+                                    Prototipo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Puntos -->
+                <div class="flex justify-center mt-6 space-x-2">
+                    <button class="w-3 h-3 rounded-full bg-[#484f58] hover:bg-[#58a6ff] transition" onclick="moveToSlide(0)" id="dot0"></button>
+                    <button class="w-3 h-3 rounded-full bg-[#484f58] hover:bg-[#58a6ff] transition" onclick="moveToSlide(1)" id="dot1"></button>
+                    <button class="w-3 h-3 rounded-full bg-[#484f58] hover:bg-[#58a6ff] transition" onclick="moveToSlide(2)" id="dot2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Modal -->
     <div id="modal1" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 overflow-y-auto">
@@ -185,13 +355,176 @@
                 <a href="#" class="text-[#8b949e] hover:text-[#58a6ff] transition">GitHub</a>
                 <a href="#" class="text-[#8b949e] hover:text-[#58a6ff] transition">Twitter</a>
             </div>
-            <p class="text-[#484f58]">© 2023 Tu Nombre. Todos los derechos reservados.</p>
+            <p class="text-[#484f58]">© 2025 Cristobal Elias Escandon Escobar. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Mismo JavaScript que la versión anterior -->
+    <!-- Modal de Proyecto -->
+    <div id="modalProyecto" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm p-4 sm:p-8 overflow-y-auto flex items-center justify-center transition-opacity duration-300 opacity-0 pointer-events-none" onclick="cerrarModalPorFondo(event)">
+        <div class="bg-[#0d1117] rounded-xl p-6 w-full max-w-4xl max-h-[90vh] overflow-y-auto border border-[#30363d] shadow-xl relative space-y-6 scale-95 opacity-0 transition-all duration-300 ease-out" onclick="event.stopPropagation()" id="modalProyectoContent">
+            <!-- Botón cerrar -->
+            <button onclick="cerrarModal()" class="absolute top-4 right-4 text-[#8b949e] hover:text-[#58a6ff] text-xl">✕</button>
+            
+            <h3 id="modalTitulo" class="text-3xl font-bold text-[#58a6ff] mb-2">Título del Proyecto</h3>
+            
+            <div class="space-y-4 text-[#c9d1d9] text-base leading-relaxed">
+                <div>
+                    <h4 class="text-[#58a6ff] font-semibold">Rol del diseñador</h4>
+                    <p id="modalRol">Diseñador UX/UI principal.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-[#58a6ff] font-semibold">Objetivo del proyecto</h4>
+                    <p id="modalObjetivo">Desarrollar una solución digital para el manejo emocional diario.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-[#58a6ff] font-semibold">Público objetivo</h4>
+                    <p id="modalPublico">Jóvenes adultos entre 18 y 30 años con estrés o ansiedad.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-[#58a6ff] font-semibold">Desafíos / Limitaciones</h4>
+                    <p id="modalDesafios">Limitaciones técnicas en accesibilidad y tiempo limitado para pruebas.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-[#58a6ff] font-semibold">Estudio de investigación</h4>
+                    <p id="modalInvestigacion">Se realizaron entrevistas cualitativas con 50 usuarios y encuestas con 200 participantes.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-[#58a6ff] font-semibold">Conceptos de diseño iniciales</h4>
+                    <p id="modalConceptos">Se planteó una interfaz minimalista con foco en bienestar visual y simplicidad.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-[#58a6ff] font-semibold">Bocetos o esquemas</h4>
+                    <img id="modalBocetos" src="bocetos.jpg" alt="Bocetos" class="rounded-lg border border-[#30363d] mt-2">
+                </div>
+
+                <div>
+                    <h4 class="text-[#58a6ff] font-semibold">Resultados de pruebas de usuario</h4>
+                    <p id="modalResultados">Se observó un incremento del 40% en métricas de usabilidad y una reducción del 25% en tiempo de tarea.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-[#58a6ff] font-semibold">Maquetas / Prototipos finales</h4>
+                    <img id="modalMockup" src="mockup.jpg" alt="Mockup" class="rounded-lg border border-[#30363d] mt-2">
+                </div>
+
+                <div>
+                    <h4 class="text-[#58a6ff] font-semibold">Conclusión</h4>
+                    <p id="modalConclusion">Aprendí a priorizar accesibilidad y simplicidad. En el futuro exploraría más variantes visuales y testing A/B.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Prototipos -->
+    <div id="modalPrototipos" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm p-4 sm:p-8 overflow-y-auto flex items-center justify-center transition-opacity duration-300 opacity-0 pointer-events-none" onclick="cerrarModalPorFondo(event)">
+        <div class="bg-[#0d1117] rounded-xl p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto border border-[#30363d] shadow-xl relative space-y-4 scale-95 opacity-0 transition-all duration-300 ease-out" onclick="event.stopPropagation()" id="modalPrototiposContent">
+            <!-- Botón cerrar -->
+            <button onclick="cerrarModalPrototipo()" class="absolute top-4 right-4 text-[#8b949e] hover:text-[#58a6ff] text-xl">✕</button>
+            
+            <h3 class="text-2xl font-bold mb-4 text-[#58a6ff]">¿Ver prototipo?</h3>
+            <p class="text-[#c9d1d9] mb-6">Estás a punto de abrir el prototipo interactivo del proyecto. ¿Deseas continuar?</p>
+
+            <div class="flex justify-center gap-4">
+                <a id="linkPrototipo" href="#" target="_blank" class="bg-[#238636] text-white px-5 py-2 rounded-md hover:bg-[#2ea043] transition">
+                    Sí, mostrar
+                </a>
+                <button onclick="cerrarModalPrototipo()" class="bg-[#21262d] text-[#c9d1d9] px-5 py-2 rounded-md hover:bg-[#30363d] border border-[#30363d] transition">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
-        // ... (El mismo JavaScript de la versión anterior)
+        const carousel = document.getElementById("carousel");
+        const totalSlides = 3;
+        let currentSlide = 0;
+    
+        function moveToSlide(index) {
+            currentSlide = index;
+            const cardWidth = document.querySelector('#carousel > div').offsetWidth + 24; // ancho + gap
+            carousel.style.transform = `translateX(-${cardWidth * index}px)`;
+            updateDots();
+        }
+    
+        function updateDots() {
+            for (let i = 0; i < totalSlides; i++) {
+                document.getElementById(`dot${i}`).classList.remove("bg-[#58a6ff]");
+                document.getElementById(`dot${i}`).classList.add("bg-[#484f58]");
+            }
+            document.getElementById(`dot${currentSlide}`).classList.remove("bg-[#484f58]");
+            document.getElementById(`dot${currentSlide}`).classList.add("bg-[#58a6ff]");
+        }
+    
+        window.addEventListener("load", () => {
+            moveToSlide(0);
+        });
     </script>
+
+    <script>
+        function abrirModal(titulo, data) {
+            // Actualizar contenido del modal
+            document.getElementById("modalTitulo").innerText = titulo;
+            document.getElementById("modalRol").innerText = data.rol;
+            document.getElementById("modalObjetivo").innerText = data.objetivo;
+            document.getElementById("modalPublico").innerText = data.publico;
+            document.getElementById("modalDesafios").innerText = data.desafios;
+            document.getElementById("modalInvestigacion").innerText = data.investigacion;
+            document.getElementById("modalConceptos").innerText = data.conceptos;
+            document.getElementById("modalResultados").innerText = data.resultados;
+            document.getElementById("modalConclusion").innerText = data.conclusion;
+            document.getElementById("modalBocetos").src = data.bocetos;
+            document.getElementById("modalMockup").src = data.mockup;
+
+            // Activar modal con animación
+            const modal = document.getElementById("modalProyecto");
+            const content = document.getElementById("modalProyectoContent");
+            
+            modal.classList.remove("opacity-0", "pointer-events-none");
+            setTimeout(() => {
+                content.classList.remove("scale-95", "opacity-0");
+                content.classList.add("scale-100", "opacity-100");
+            }, 10);
+        }
+
+        function cerrarModal() {
+            const modal = document.getElementById("modalProyecto");
+            const content = document.getElementById("modalProyectoContent");
+            
+            content.classList.remove("scale-100", "opacity-100");
+            content.classList.add("scale-95", "opacity-0");
+            setTimeout(() => {
+                modal.classList.add("opacity-0", "pointer-events-none");
+            }, 300);
+        }
+
+        function cerrarModalPorFondo(e) {
+            if (e.target === document.getElementById("modalProyecto")) {
+                cerrarModal();
+            }
+        }
+    </script>
+    
+    </script>
+
+    <script>
+        function abrirModalPrototipo(link) {
+            document.getElementById("linkPrototipo").href = link;
+            document.getElementById("modalPrototipo").classList.remove("hidden");
+            document.getElementById("modalPrototipo").classList.add("flex");
+        }
+
+        function cerrarModalPrototipo() {
+            document.getElementById("modalPrototipo").classList.add("hidden");
+            document.getElementById("modalPrototipo").classList.remove("flex");
+        }
+    </script>
+
 </body>
 </html>
